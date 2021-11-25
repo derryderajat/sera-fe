@@ -1,0 +1,7 @@
+.main{
+    display: flex;
+    background-color: tomato;
+    flex-direction: column;
+    flex:0.4;
+    height: 700px;
+}

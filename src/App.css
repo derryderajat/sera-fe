@@ -1,0 +1,13 @@
+.App {
+
+}
+
+.App{
+  background-color: #F5F6FB;
+  height: 1000px;
+}
+
+.App__body{
+  display: flex;
+  margin-top: 2%;
+}
