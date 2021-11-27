@@ -1,7 +1,183 @@
 .main{
     display: flex;
-    background-color: tomato;
     flex-direction: column;
-    flex:0.4;
+    flex:0.45;
     height: 700px;
+    margin-right: 20px;
 }
+
+.main__createPost{
+    background-color: #fff;
+    height: 130px;
+    width: 100%;
+    margin:0 auto;
+    border-radius: 20px;
+}
+
+.main__posts{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top:12px;
+    min-height: 900px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+.main__postContainer{
+    background-color: #fff;
+    height: 200px;
+    border-radius: 20px;
+    margin-top:20px;
+
+    
+}
+.main__postContainer{
+    margin: 0 auto;
+}
+.main__postHeader{
+    display: flex;
+    position: relative;
+    top:20px;
+}
+.main__postBody{
+    position: relative;
+    left:20px;
+}
+.main__postTitle{
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 10px;
+    
+}
+.main__postCategory{
+    background-color:#36D6B7 ;
+    min-height: 4vh;
+    width: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: lighter;
+}
+.main__postStatus{
+    display: flex;
+    flex-direction: column;
+}
+
+.postStatusContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-left:14px;
+}
+.postStatus__number{
+    font-size:x-large;
+}
+.postStatus__detail{
+font-size: 12px;
+}
+.main__postFooter{
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+margin-top: 20px;
+}
+.footer__seen{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.footer__seen > .MuiSvgIcon-root{
+    color:rgb(183, 197, 193);
+}
+.seen__detail{
+    margin-left: 5px;
+}
+.footer__sender{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+
+.footer__activity{
+    font-weight: lighter;
+    font-size: .8rem;
+}
+.sender{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+.sender__name{
+    font-size: small;
+    font-weight: 700;
+}
+.main__categoryContainer{
+    background-color: #fff;
+    margin-top: 20px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.main__categories{
+    display: flex   ;
+    justify-content: end;
+    align-items: center;
+}
+
+.main__category{
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color:#9592A3;
+}
+.main__categoryTitle{
+    position: relative;
+    left:10px;
+    top:6px;
+}
+.main__category:hover{
+    background-color: #D0EDDE;
+    border-radius: 10px;
+    color:#181515
+}
+.active__category{
+    color:black;
+    border-bottom: 1.5px solid #36D6B7;
+}
+.main__postsButton{
+    background-color: #F1F4F9;
+    width: 40%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main__postsButton > .MuiSvgIcon-root{
+    color:#36D6B7;
+    }
+.main__postsButton:hover{
+    background-color: #C7F8E4;
+}
+.main__postsTitle{
+    color:#9592A3;
+    font-size: small;
+    width: 50%;
+    margin-left:20px;
+    margin-top: 10px;
+}
+

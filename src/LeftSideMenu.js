@@ -1,7 +1,6 @@
 import React from "react";
 import "./LeftSideMenu.css";
 import HomeIcon from "@mui/icons-material/Home";
-import { Avatar, IconButton } from "@material-ui/core";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 function LeftSideMenu() {
   return (

@@ -1,3 +1,9 @@
+.header{
+    position:fixed;
+    top:0;
+    z-index:200;
+    width: 100%;
+}
 .header__navbar{
  background-color: #ffffff;
  height: 70px;
