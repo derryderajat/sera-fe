@@ -2,6 +2,7 @@ import React from "react";
 import "./LeftSideMenu.css";
 import HomeIcon from "@mui/icons-material/Home";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { withRouter } from "react-router-dom";
 function LeftSideMenu() {
   return (
     <div className="leftSide">

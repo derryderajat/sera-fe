@@ -8,7 +8,7 @@
 
 .main__createPost{
     background-color: #fff;
-    height: 130px;
+    min-height: 80px;
     width: 100%;
     margin:0 auto;
     border-radius: 20px;

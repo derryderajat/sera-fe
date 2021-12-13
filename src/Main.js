@@ -3,15 +3,19 @@ import "./Main.css";
 import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
 import { Avatar } from "@material-ui/core";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import { Link } from "react-router-dom";
+
 function Main() {
   return (
     <div className="main">
       <div className="main__createPost">
         <div className="main__postsTitle">Post now~</div>
-        <div className="main__postsButton">
-          <DriveFileRenameOutlineIcon />
-          Posts
-        </div>
+        <Link to="createPost">
+          <div className="main__postsButton">
+            <DriveFileRenameOutlineIcon />
+            Posts
+          </div>
+        </Link>
       </div>
       <div className="main__categoryContainer">
         <span className="main__categoryTitle">Home</span>
@@ -34,7 +38,9 @@ function Main() {
               </div>
             </div>
             <div className="main__postBody">
-              <div className="main__postTitle">Ini Judul Post</div>
+              <Link to={`topic/1`}>
+                <div className="main__postTitle">Ini Judul Post</div>
+              </Link>
               <div className="main__postContent">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry....
@@ -73,7 +79,9 @@ function Main() {
               </div>
             </div>
             <div className="main__postBody">
-              <div className="main__postTitle">Ini Judul Post</div>
+              <Link to={`topic/2`}>
+                <div className="main__postTitle">Ini Judul Post</div>
+              </Link>
               <div className="main__postContent">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry....
@@ -112,7 +120,9 @@ function Main() {
               </div>
             </div>
             <div className="main__postBody">
-              <div className="main__postTitle">Ini Judul Post</div>
+              <Link to={`topic/3`}>
+                <div className="main__postTitle">Ini Judul Post</div>
+              </Link>
               <div className="main__postContent">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry....
