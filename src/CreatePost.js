@@ -41,6 +41,10 @@ const converter = new Showdown.Converter({
 function CreatePost() {
   const [value, setValue] = React.useState("**Hello world!!!**");
   const [selectedTab, setSelectedTab] = React.useState("write");
+  const [title, setTitle] = React.useState(
+    "e.g Bagaimana caranya menginstall Xampp"
+  );
+  const [tags, setTags] = React.useState("e.g java, php, bahasa");
   React.useEffect(() => {
     console.log(value);
   }, [value]);
@@ -65,13 +69,25 @@ function CreatePost() {
     // returns true meaning that the save was successful
     return true;
   };
-
+  function handleChangeTitle(e) {
+    setTitle(e.currentTarget.value);
+  }
   return (
     <div className="createPosts">
+      <div className="title">
+        <input placeholder={title} onChange={handleChangeTitle}></input>
+      </div>
+      <div className="tags">
+        <input placeholder={tags}></input>
+      </div>
       <div className="containerPost">
         <ReactMde
           value={value}
           onChange={setValue}
+          minEditorHeight={800}
+          maxEditorHeight={1000}
+          minPreviewHeight={800}
+          maxPreviewHeight={1000}
           selectedTab={selectedTab}
           onTabChange={setSelectedTab}
           generateMarkdownPreview={(markdown) =>

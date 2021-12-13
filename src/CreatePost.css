@@ -1,19 +1,18 @@
-* {
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-body {
-font-family: sans-serif;
-line-height: 1.15;
+.createPosts{
+    display: flex;
+    flex-direction: column;
+    flex: 0.6;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .containerPost {
 width: 100%;
-height: 400px;
-padding: 10px;
-background-color: aquamarine;
+height: 350px;
 }
 .formControl{
     display: flex;
+    position: relative;
+    align-items: flex-end;
+    top: 700px;
 }
