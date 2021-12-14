@@ -18,9 +18,11 @@ function Header() {
           <input type="text" placeholder="cari postingan atau user" />
         </div>
         <div className="header__menus">
-          <IconButton className="icon__hover">
-            <DriveFileRenameOutlineIcon />
-          </IconButton>
+          <Link to="/coba">
+            <IconButton className="icon__hover">
+              <DriveFileRenameOutlineIcon />
+            </IconButton>
+          </Link>
           <IconButton className="icon__hover">
             <NotificationsNoneIcon />
           </IconButton>

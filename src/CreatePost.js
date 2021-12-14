@@ -72,13 +72,16 @@ function CreatePost() {
   function handleChangeTitle(e) {
     setTitle(e.currentTarget.value);
   }
+  function handleChangeTags(e) {
+    setTitle(e.currentTarget.value);
+  }
   return (
     <div className="createPosts">
       <div className="title">
         <input placeholder={title} onChange={handleChangeTitle}></input>
       </div>
       <div className="tags">
-        <input placeholder={tags}></input>
+        <input placeholder={tags} onChange={handleChangeTags}></input>
       </div>
       <div className="containerPost">
         <ReactMde
