@@ -1,119 +1,38 @@
-import * as React from "react";
-import ReactMde from "react-mde";
-import ReactDOM from "react-dom";
+import React, { useState, useEffect } from "react";
 import * as Showdown from "showdown";
 import "./CreatePost.css";
-import "react-mde/lib/styles/css/react-mde-all.css";
-
-function loadSuggestions(text) {
-  return new Promise((accept, reject) => {
-    setTimeout(() => {
-      const suggestions = [
-        {
-          preview: "Andre",
-          value: "@andre",
-        },
-        {
-          preview: "Angela",
-          value: "@angela",
-        },
-        {
-          preview: "David",
-          value: "@david",
-        },
-        {
-          preview: "Louise",
-          value: "@louise",
-        },
-      ].filter((i) => i.preview.toLowerCase().includes(text.toLowerCase()));
-      accept(suggestions);
-    }, 250);
-  });
-}
-
-const converter = new Showdown.Converter({
-  tables: true,
-  simplifiedAutoLink: true,
-  strikethrough: true,
-  tasklists: true,
-});
-
+import MDEditor from "@uiw/react-md-editor";
+const handleKeyDown = (event) => {
+  event.preventDefault();
+  let charCode = String.fromCharCode(event.which).toLowerCase();
+  if ((event.ctrlKey || event.metaKey) && charCode === "s") {
+    alert("CTRL+S Pressed");
+  } else if ((event.ctrlKey || event.metaKey) && charCode === "c") {
+    alert("CTRL+C Pressed");
+  } else if ((event.ctrlKey || event.metaKey) && charCode === "v") {
+    alert("CTRL+V Pressed");
+  }
+};
 function CreatePost() {
-  const [value, setValue] = React.useState("**Hello world!!!**");
-  const [selectedTab, setSelectedTab] = React.useState("write");
-  const [title, setTitle] = React.useState(
-    "e.g Bagaimana caranya menginstall Xampp"
+  const [value, setValue] = useState(
+    "**Deskripsi Pertanyaan:**\n<!-- Masukan deskripsi pertanyaan Anda dibawah baris ini -->\n**Kode:**\n<!-- Masukan kode Anda kedalam ``` yang sudah tertera dibawah. DILARANG memberikan kode dalam bentuk screenshot! Klik tombol BANTUAN PENULISAN dibawah text editor untuk panduan menulis -->\n ```\n``` "
   );
-  const [tags, setTags] = React.useState("e.g java, php, bahasa");
-  React.useEffect(() => {
+  useEffect(() => {
     console.log(value);
   }, [value]);
-  const save = async function* (data) {
-    // Promise that waits for "time" milliseconds
-    const wait = function (time) {
-      return new Promise((a, r) => {
-        setTimeout(() => a(), time);
-      });
-    };
-
-    // Upload "data" to your server
-    // Use XMLHttpRequest.send to send a FormData object containing
-    // "data"
-    // Check this question: https://stackoverflow.com/questions/18055422/how-to-receive-php-image-data-over-copy-n-paste-javascript-with-xmlhttprequest
-
-    await wait(2000);
-    // yields the URL that should be inserted in the markdown
-    yield "https://picsum.photos/300";
-    await wait(2000);
-
-    // returns true meaning that the save was successful
-    return true;
-  };
-  function handleChangeTitle(e) {
-    setTitle(e.currentTarget.value);
-  }
-  function handleChangeTags(e) {
-    setTitle(e.currentTarget.value);
-  }
   return (
-    <div className="createPosts">
-      <div className="title">
-        <input placeholder={title} onChange={handleChangeTitle}></input>
-      </div>
-      <div className="tags">
-        <input placeholder={tags} onChange={handleChangeTags}></input>
-      </div>
-      <div className="containerPost">
-        <ReactMde
+    <div className="containerCreatePost">
+      <div className="createPost">
+        <MDEditor
+          className="editor"
+          height={500}
+          width={700}
           value={value}
           onChange={setValue}
-          minEditorHeight={800}
-          maxEditorHeight={1000}
-          minPreviewHeight={800}
-          maxPreviewHeight={1000}
-          selectedTab={selectedTab}
-          onTabChange={setSelectedTab}
-          generateMarkdownPreview={(markdown) =>
-            Promise.resolve(converter.makeHtml(markdown))
-          }
-          loadSuggestions={loadSuggestions}
-          childProps={{
-            writeButton: {
-              tabIndex: -1,
-            },
-          }}
-          paste={{
-            saveImage: save,
-          }}
+          preview={"edit"}
+          onKeyUp={handleKeyDown}
         />
-      </div>
-      <div className="formControl">
-        <div className="backContainer">
-          <button>Back</button>
-        </div>
-        <div className="SendContainer">
-          <button>Kirim</button>
-        </div>
+        <MDEditor.Markdown source={value} />
       </div>
     </div>
   );

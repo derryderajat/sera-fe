@@ -1,18 +1,11 @@
-.createPosts{
-    display: flex;
-    flex-direction: column;
-    flex: 0.6;
-    justify-content: center;
+.createPost{
+    width: 80%;
     margin: 0 auto;
 }
 
-.containerPost {
-width: 100%;
-height: 350px;
+.editor{
+border-radius: 20px;
 }
-.formControl{
-    display: flex;
-    position: relative;
-    align-items: flex-end;
-    top: 700px;
+.createPost .w-md-editor-toolbar{
+    background-color: aquamarine !important;
 }
