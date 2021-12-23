@@ -167,10 +167,24 @@
 
 
 .createPost .editor{
-
-
+    border-radius: 10px;
+    
 }
 .createPost .w-md-editor-toolbar{
+    border-radius: 10px;
     height: 7vh !important;
 
+}
+
+
+.controlForm{
+    display: flex;
+   justify-content: flex-end;
+}
+.buttonControl{
+    background-color: rgba(7, 167, 55, 0.671);
+    height: 40px;
+    width: 60px;
+    margin-right:8vw;
+    color:honeydew
 }

@@ -5,15 +5,13 @@ import MDEditor from "@uiw/react-md-editor";
 const handleKeyDown = (event) => {
   event.preventDefault();
   let charCode = String.fromCharCode(event.which).toLowerCase();
-  if ((event.ctrlKey || event.metaKey) && charCode === "s") {
-    alert("CTRL+S Pressed");
-  } else if ((event.ctrlKey || event.metaKey) && charCode === "c") {
-    alert("CTRL+C Pressed");
-  } else if ((event.ctrlKey || event.metaKey) && charCode === "v") {
+  if ((event.ctrlKey || event.metaKey) && charCode === "v") {
     alert("CTRL+V Pressed");
   }
 };
 function CreatePost() {
+  const [urlImg, setUrlImg] = useState();
+
   const [value, setValue] = useState(
     "**Deskripsi Pertanyaan:**\n<!-- Masukan deskripsi pertanyaan Anda dibawah baris ini -->\n**Kode:**\n<!-- Masukan kode Anda kedalam ``` yang sudah tertera dibawah. DILARANG memberikan kode dalam bentuk screenshot! Klik tombol BANTUAN PENULISAN dibawah text editor untuk panduan menulis --> \n\n```\nprint('Hello World')\n``` "
   );
@@ -66,6 +64,14 @@ function CreatePost() {
           onKeyUp={handleKeyDown}
         />
         <MDEditor.Markdown source={value} />
+      </div>
+      <div className="controlForm">
+        <div>
+          <button className="buttonControl">Back</button>
+        </div>
+        <div>
+          <button className="buttonControl">Kirim</button>
+        </div>
       </div>
     </div>
   );
