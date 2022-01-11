@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect, useRef, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 
-function App() {
+function Home() {
   const [location, setLocation] = useState("/");
   return (
     <Router>
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
