@@ -10,14 +10,15 @@ function Login() {
             </div>
             <div className="form__login">
                 <form>
-                    UserName <input className="input_login">
+                    Username <input className="input_login">
                     </input>
-                    PassWord
+                    Password
                     <input className="input_login" type="password">
                     </input>
+                    {/* <Link to="Home"> */}
                     <button className="button_login" type="submit">Login</button>
+                    {/* </Link> */}
                     <div className="info">
-                <div className="jarak">Lupa Password?</div>
                 <div className="jarak">Buat Akun</div>
                 </div>
                 </form>         
