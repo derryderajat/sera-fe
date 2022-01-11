@@ -1,11 +1,9 @@
 import React from "react";
 import "./Header.css";
 import { SearchOutlined } from "@material-ui/icons";
-import { Avatar, IconButton } from "@material-ui/core";
-import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Link } from "react-router-dom";
+
+
 function Header() {
   return (
     <div className="header">
@@ -18,15 +16,12 @@ function Header() {
           <input type="text" placeholder="cari postingan atau user" />
         </div>
         <div className="header__menus">
-          <IconButton className="icon__hover">
-            <DriveFileRenameOutlineIcon />
-          </IconButton>
-          <IconButton className="icon__hover">
-            <NotificationsNoneIcon />
-          </IconButton>
-          <IconButton className="icon__hover">
-            <AccountCircleIcon />
-          </IconButton>
+          <Link to="login">
+          <div className="icon_hover">Sign In</div>
+          </Link>     
+          <Link to="register">
+          <div className="icon__hover">Sign Up</div>   
+           </Link>   
         </div>
       </div>
     </div>
