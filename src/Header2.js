@@ -1,10 +1,12 @@
 import React from "react";
-import "./Header.css";
+import "./Header2.css";
 import { SearchOutlined } from "@material-ui/icons";
+import { Avatar, IconButton } from "@material-ui/core";
+import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Link } from "react-router-dom";
-
-
-function Header() {
+function Header2() {
   return (
     <div className="header">
       <div className="header__navbar">
@@ -16,30 +18,21 @@ function Header() {
           <input type="text" placeholder="cari postingan atau user" />
         </div>
         <div className="header__menus">
-<<<<<<< HEAD:src/components/Header/Header.js
-          <Link to="/coba">
-            <IconButton className="icon__hover">
-              <DriveFileRenameOutlineIcon />
-            </IconButton>
-          </Link>
           <IconButton className="icon__hover">
-            <NotificationsNoneIcon />
+            <DriveFileRenameOutlineIcon />
           </IconButton>
           <IconButton className="icon__hover">
+            <NotificationsNoneIcon />       
+          </IconButton>
+          <Link to="profile">
+          <IconButton className="icon__hover">       
             <AccountCircleIcon />
           </IconButton>
-=======
-          <Link to="login">
-          <div className="icon_hover">Sign In</div>
-          </Link>     
-          <Link to="register">
-          <div className="icon__hover">Sign Up</div>   
-           </Link>   
->>>>>>> 8e8e18f1eca9ed4c3da7d574fc26017b0c269a51:src/Header.js
+          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default Header;
+export default Header2;

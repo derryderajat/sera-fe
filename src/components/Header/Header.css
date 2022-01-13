@@ -4,6 +4,9 @@
     z-index:200;
     width: 100%;
 }
+.header__menus{
+    display: inline;
+}
 .header__navbar{
  background-color: #ffffff;
  height: 70px;
@@ -36,7 +39,31 @@
     background-color:#F1F4F9;
     margin-right: 4%;
 }
-
+.icon__hover{
+    display: inline;
+    width: auto;
+    height: 10px;
+    border-color: #6E7EF8 ;
+    border-style: solid;
+    text-decoration: none;
+    margin-inline: 10px;
+    padding: 5px;
+}
+.icon_hover{
+    display: inline;
+    width: auto;
+    height: 10px;
+    text-decoration: none;
+    margin-inline: 10px;
+    padding: 2px;
+}
+.icon_hover:hover{
+    background-color: #6E7EF8 !important;
+    border-style: none;
+    color:white;
+}
 .icon__hover:hover{
     background-color: #6E7EF8 !important;
+    border-style: none;
+    color:white;
 }
