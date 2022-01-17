@@ -6,7 +6,7 @@ import RightSideMenu from "./RightSideMenu";
 import Topic from "./Topic";
 import CreatePost from "./CreatePost";
 import Profile from "./Profile";
-import Login  from "./Login";
+import Login from "./components/Login/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect, useRef, Fragment } from "react";
 import { useNavigate } from "react-router-dom";

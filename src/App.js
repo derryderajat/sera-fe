@@ -5,6 +5,8 @@ import CreatePost from "./components/CreatePost/CreatePost";
 import Main from "./components/Main/Main";
 import Topic from "./components/Topics/Topic/Topic";
 // import CreatePost from "./components/CreatePost/CreatePost";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect, useRef, Fragment } from "react";
@@ -26,6 +28,8 @@ function App() {
                 // element={[<LeftSideMenu />, <Main />, <RightSideMenu />]}
                 element={[<Main />, <RightSideMenu />]}
               ></Route>
+              <Route path="login" element={[<Login />]}></Route>
+              <Route path="register" element={[<Register />]}></Route>
             </Route>
 
             <Route path="new" element={<CreatePost />} />
