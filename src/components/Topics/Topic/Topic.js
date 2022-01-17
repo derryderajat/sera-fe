@@ -6,6 +6,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import { Link } from "react-router-dom";
 function Topic() {
   let params = useParams();
+  console.log(params["_id"]);
 
   return (
     <div className="main__posts">

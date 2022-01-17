@@ -36,7 +36,7 @@ img{
     row-gap: 10px;
     margin-top:12px;
     background-position: right middle;
-    max-width:55%;
+    /* max-width:55%; */
     border-radius: 10px;
 }
 .rightSide__body__middle:h3{
@@ -55,7 +55,7 @@ img{
     background-position: right bottom;
     row-gap: 10px;
     margin-top:12px;
-    max-width:55%;
+    /* max-width:55%; */
     position: relative;
     border-radius: 10px;
 }

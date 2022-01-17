@@ -18,18 +18,17 @@ function Login() {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const studentObject = {
-      email: this.acc.email,
-      username: this.acc.username,
-      password: this.acc.password,
+    const newAccount = {
+      email: acc.email,
+      username: acc.username,
+      password: acc.password,
     };
     axios
-      .post("http://localhost:4000/students/create-student", studentObject)
+      .post("http://localhost:8000/api/accounts", newAccount)
       .then((res) => console.log(res.data));
 
-    this.setState({ name: "", email: "", rollno: "" });
+    setAcc({ email: null, username: null, password: null });
   };
-
   return (
     <div className="login">
       <div className="header__login">Account Register</div>

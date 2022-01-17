@@ -8,7 +8,7 @@ function Topics() {
       {data.topics.map((data, key) => {
         return (
           <div className="topics">
-            <Link to={"topics/" + data.name}>
+            <Link to={"topics/" + data["_id"]}>
               <div>
                 <img className="image-topics" src={data.img} loading="lazy" />
               </div>

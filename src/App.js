@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import RightSideMenu from "./components/RightSideMenu/RightSideMenu";
 import CreatePost from "./components/CreatePost/CreatePost";
 import Main from "./components/Main/Main";
+import Topics from "./components/Topics/Topics";
 import Topic from "./components/Topics/Topic/Topic";
 // import CreatePost from "./components/CreatePost/CreatePost";
 import Login from "./components/Login/Login";
@@ -33,8 +34,11 @@ function App() {
             </Route>
 
             <Route path="new" element={<CreatePost />} />
-            <Route path="topics/" elemeent={<Topic />}></Route>
-            {/* <Route path="/topic/:topicId" element={<Topic />}></Route> */}
+            <Route path="topics/" element={<Topics />}></Route>
+            <Route
+              path="topics/:idTopic"
+              element={[<Topic />, <RightSideMenu />]}
+            ></Route>
           </Routes>
         </div>
       </div>
