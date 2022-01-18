@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 
 import data from "./topics.json";
 function App() {
-  console.log(data);
   const [location, setLocation] = useState("/");
   return (
     <Router>
