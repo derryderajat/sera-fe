@@ -16,13 +16,13 @@ function Main() {
           </div>
         </Link>
       </div>
-      <div className="main__categoryContainer">
+      {/* <div className="main__categoryContainer">
         <span className="main__categoryTitle">Home</span>
         <div className="main__categories">
           <div className="main__category active__category">Baru</div>
           <div className="main__category">Belum Dijawab</div>
         </div>
-      </div>
+      </div> */}
 
       <Topics />
     </div>
