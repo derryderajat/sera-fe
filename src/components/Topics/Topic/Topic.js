@@ -4,12 +4,23 @@ import { useParams } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { Link } from "react-router-dom";
+import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
+
 function Topic() {
   let params = useParams();
   console.log(params["_id"]);
 
   return (
     <div className="main__posts">
+       <div className="main__createPost">
+        <div className="main__postsTitle">Post now~</div>
+        <Link to="new">
+          <div className="main__postsButton">
+            <DriveFileRenameOutlineIcon />
+            Posts
+          </div>
+        </Link>
+      </div>
       <div className="main__postContainer">
         <div className="main__postHeader">
           <div className="main__postStatus">

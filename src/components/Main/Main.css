@@ -1,20 +1,18 @@
 .main{
     display: flex;
     flex-direction: column;
-    flex:0.85;
     height: 700px;
+    width: 1000px;
     margin-right: 20px;
 }
 
 .main__createPost{
     background-color: #fff;
     min-height: 80px;
-    width: 100%;
+    width: 1000px;
     margin:0 auto;
     border-radius: 20px;
 }
-
-
 
 .Topic{
     width: 300px;
